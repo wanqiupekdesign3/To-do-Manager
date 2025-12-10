@@ -5,7 +5,7 @@ a single page webpage task tracker and budget monitor
         <title>A Timetable Manager.</title>
         <meta charset="utf-8">
     </head>
-    <body>
+    <body> <!--Main body table-->
       <center>
         <br>
         <br>
