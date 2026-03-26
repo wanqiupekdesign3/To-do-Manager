@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>A Timetable Manager.</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="favicon.png">
+    </head>
+    <body>
+     
+      <div class="container">
+         
+        <div class="todo-app">
+          
+            <h2>The List...<img src="favicon.png" alt="Favicon"></h2>
+            
+              <div class="row">
+                <button onclick="clearTask()">Clear</button>
+                <input type="text" id="input-box" placeholder="Add your stuff here">
+                <button onclick="addTask()">Add</button>
+                </div>
+            <ul id="list-container"></ul>
+        </div>
+
+        <div id="calculator">
+          <h2>Calculator</h2>
+          <input id="display" type="text" readonly>
+            <div id="keys">   
+              <button onclick="appendToDisplay('7')">7</button>
+              <button onclick="appendToDisplay('8')">8</button>
+              <button onclick="appendToDisplay('9')">9</button>
+              <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+              <button onclick="appendToDisplay('4')">4</button>
+              <button onclick="appendToDisplay('5')">5</button>
+              <button onclick="appendToDisplay('6')">6</button>
+              <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+              <button onclick="appendToDisplay('1')">1</button>
+              <button onclick="appendToDisplay('2')">2</button>
+              <button onclick="appendToDisplay('3')">3</button>
+              <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
+              <button onclick="appendToDisplay('.')">.</button>
+              <button onclick="appendToDisplay('0')">0</button>
+              <button onclick="calculateResult()">=</button> 
+              <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
+              <button onclick="clearDisplay()">C</button>
+            </div>
+          </div>
+          
+  <!-- the cash app part -->
+<main class="wrap" aria-labelledby="title">
+    <h1 id="title" class="title">💰 Budget Tracking Bar</h1>
+
+    <section class="card" aria-label="Inputs">
+      <div class="grid">
+        <div>
+          <label for="income">Income</label>
+          <div class="field">
+            <span class="prefix">MYR</span>
+            <input class="ring" id="income" type="number" min="0" step="0.01" placeholder="e.g., 2500.00" />
+          </div>
+        </div>
+        <div>
+          <label for="expense">Expense</label>
+          <div class="field">
+            <span class="prefix">MYR</span>
+            <input class="ring" id="expense" type="number" min="0" step="0.01" placeholder="e.g., 820.50" />
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="updateBtn" class="ring" type="button">Update</button>
+        <button id="resetBtn" class="secondary ring" type="button">Reset</button>
+      </div>
+      <p class="hint">Tip: Income is your totel available fuel. Expense is how much you’ve used. The bar shows % used.</p>
+    </section>
+
+    <section class="card bar-wrap" aria-label="Progress">
+      <div class="bar-label">
+        <span id="statusText">0% of income used</span>
+        <span id="remainingText">Remaining: MYR 0.00</span>
+      </div>
+      <div id="progress" class="progress ok" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-labelledby="statusText">
+        <div id="fill" class="fill"></div>
+      </div>
+
+      <div class="stats" aria-label="Summary">
+        <div class="stat">
+          <div class="k">Income</div>
+          <div class="v" id="statIncome">MYR 0.00</div>
+        </div>
+        <div class="stat">
+          <div class="k">Spent</div>
+          <div class="v" id="statSpent">MYR 0.00</div>
+        </div>
+        <div class="stat">
+          <div class="k">Remaining</div>
+          <div class="v" id="statRemain">MYR 0.00</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="PROTOTYPE.js"></script>
+</body>
+</html>
